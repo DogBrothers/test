@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<!--[if lt IE 10]>
+<script type="text/javascript" src="pie/PIE_IE678.js"></script>
+<![endif]-->
+<link href="{path template/}/css/reset.css" rel="stylesheet" type="text/css">
+<link href="{path template/}/css/header.css" rel="stylesheet" type="text/css">
+<link href="{path template/}/css/banenr.css" rel="stylesheet" type="text/css">
+<link href="{path template/}/css/container.css" rel="stylesheet" type="text/css">
+<link href="{path template/}/css/footer.css" rel="stylesheet" type="text/css">
+<script src="{path template/}/js/jquery.js"></script>
+<script src="{path template/}/js/nav.js"></script>
+</head>
+
+<body>
+{include header/}
+<div class="container clear_both">
+	<div class="main_business width_1180">
+    	<h1>主营业务</h1>
+        <div class="business_Bottom overflow_h width_1180">
+        	<ul>
+        	<a href="{path /}alone/alone.php?id=84" class="overflow_h">
+            	<dl>
+                	<dt><img class=" transform_sc" src="{path template/}/images/index_07.png" width="285" height="413"></dt>
+                	<dd>
+                    	<strong>冷链服务</strong>
+                      
+                    </dd>
+                </dl>
+            </a>
+            <a href="{path /}alone/alone.php?id=84" class="overflow_h">
+            	<dl>
+                	<dt><img class=" transform_sc" src="{path template/}/images/index_07.png" width="285" height="413"></dt>
+                	<dd>
+                    	<strong>冷链服务</strong>
+                      
+                    </dd>
+                </dl>
+            </a>
+            <a href="{path /}alone/alone.php?id=84" class="overflow_h">
+            	<dl>
+                	<dt><img class=" transform_sc" src="{path template/}/images/index_07.png" width="285" height="413"></dt>
+                	<dd>
+                    	<strong>冷链服务</strong>
+                      
+                    </dd>
+                </dl>
+            </a>
+            <a href="{path /}alone/alone.php?id=84" class="overflow_h">
+            	<dl>
+                	<dt><img class=" transform_sc" src="{path template/}/images/index_07.png" width="285" height="413"></dt>
+                	<dd>
+                    	<strong>冷链服务</strong>
+                      
+                    </dd>
+                </dl>
+            </a>
+        	</ul>
+        </div>
+    </div>
+    <div class="about clear_both">
+    	<div class="about_Title width_1180 overflow_h">
+    		<img class="float_l transform_sc" src="{path template/}/images/index_15.png">
+            <a href="{path //}alone/alone.php?id=83" class="float_r">
+            	<h2>关于我们</h2>
+                <h3>About&nbsp;us</h3>
+                <h4>
+                    {print get_block_content('aboutus')/}
+                </h4>
+            </a>
+        </div>
+    </div>
+{include an/}
+    <div class="news_Box clear_both">
+    	<div class="news width_1180">
+            <h1>新闻动态</h1>
+            <h2>新闻 News</h2>
+            <dl>
+                {assign source=get_tpl_cate_content($tpl_id='31',$limit='0,3',$order_type='id',$filter='',$pic='no',$order='desc',$lang='') name=pr/}
+                    {loop source=$pr['contents']}
+                    <dd>
+                        <a href="{print $v['url']/}"><b>{print $v['title']/}</b><i>&lt;&lt;更多&gt;&gt;</i><span>2016-04-12</span></a>
+                    </dd>
+                    {/loop}
+            </dl>
+            <a href="" class="more">更多</a>
+        </div>
+    </div>
+</div>
+{include footer/}
+</body>
+</html>
